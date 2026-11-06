@@ -24,6 +24,7 @@ namespace allocator
         [[nodiscard]] std::size_t capacity() const;
         [[nodiscard]] std::size_t used() const;
         [[nodiscard]] std::size_t available() const;
+        [[nodiscard]] std::size_t free_blocks() const;
 
     private:
         struct Allocation

@@ -104,4 +104,10 @@ namespace allocator
         return capacity_ - used_;
     }
 
+    std::size_t MemoryPool::free_blocks() const
+    {
+        // Free tracking: report how many fixed-size blocks are currently available.
+        return free_units_.size();
+    }
+
 }
